@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Auth | Premium Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Navbar -->
+        <nav class="auth-nav">
+            <h1 class="logo"><span>Auth</span></h1>
+            <div class="nav-links" id="navLinks">
+                <button type="button" class="nav-btn active" id="navLoginBtn">Login</button>
+                <button type="button" class="nav-btn" id="navSignupBtn">Sign Up</button>
+            </div>
+            <div class="nav-links hidden" id="navLogoutLinks">
+                <button type="button" class="nav-btn logout-btn" id="navLogoutBtn">Logout</button>
+            </div>
+        </nav>
+
+        <div class="content-wrapper">
+            <!-- Toast Notifications -->
+            <div id="toast" class="toast">Message here</div>
+
+            <!-- Login View -->
+            <div class="view-section active" id="loginView">
+                <div class="form-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your details to access your account.</p>
+                </div>
+                <form id="loginForm" class="auth-form">
+                    <div class="input-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In <span class="arrow">→</span></button>
+                </form>
+            </div>
+
+            <!-- Signup View -->
+            <div class="view-section" id="signupView">
+                <div class="form-header">
+                    <h2>Create Account</h2>
+                    <p>Join us and discover infinite possibilities.</p>
+                </div>
+                <form id="signupForm" class="auth-form">
+                    <div class="input-group">
+                        <label for="signupName">Full Name</label>
+                        <input type="text" id="signupName" placeholder="John Doe" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signupEmail">Email</label>
+                        <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signupPassword">Password</label>
+                        <input type="password" id="signupPassword" placeholder="••••••••" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="signupRole">Role</label>
+                        <select id="signupRole" required>
+                            <option value="Student">Student</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Visitor">Visitor</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up <span class="arrow">→</span></button>
+                </form>
+            </div>
+
+            <!-- Dashboard View -->
+            <div class="view-section" id="dashboardView">
+                <div class="form-header">
+                    <h2>Dashboard</h2>
+                    <p id="dashboardWelcome">Welcome!</p>
+                </div>
+                
+                <!-- <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>Test Student Route</h3>
+                        <p>Verify access to the `isStudent` protected route.</p>
+                        <button class="action-btn" id="testStudentBtn">Access Student Route</button>
+                    </div>
+                    <div class="card">
+                        <h3>Test Admin Route</h3>
+                        <p>Verify access to the `isAdmin` protected route.</p>
+                        <button class="action-btn admin-btn" id="testAdminBtn">Access Admin Route</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class="response-box" id="responseBox">
+                    <p class="placeholder-text">API responses will appear here...</p>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
