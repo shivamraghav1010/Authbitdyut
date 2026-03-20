@@ -6,7 +6,7 @@ A secure, full-stack authentication system built with Node.js, Express, MongoDB,
 This project demonstrates a production-ready authentication flow using JSON Web Tokens (JWT). It features secure user registration, login, password hashing, and role-based access control (Admin, Student, Visitor).
 
 ## Live Demo
-Check out the live application here: **[Insert Live Link Here]**
+Check out the live application here: **(https://authbitdyut.onrender.com)**
 
 ## Approach & Architecture
 
@@ -16,7 +16,7 @@ Check out the live application here: **[Insert Live Link Here]**
 - **Security**: 
   - User passwords are cryptographically hashed using `bcrypt` before being saved to the MongoDB database.
   - Authentication relies on `jsonwebtoken` (JWT). Upon successful login, a token is issued to the client in the response payload and also set as a secure cookie.
-  
+
 - **Protected Routes & Middleware**: 
   - `auth.js` middleware parses the request (checking cookies, body, and the `Authorization` header) to verify the JWT token.
   - Additional role-based middlewares (`isAdmin` and `isStudent`) restrict access to specific routes based on the user's role defined at registration.

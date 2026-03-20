@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Elements ---
+    
     const navLoginBtn = document.getElementById('navLoginBtn');
     const navSignupBtn = document.getElementById('navSignupBtn');
     const navLogoutBtn = document.getElementById('navLogoutBtn');
@@ -19,24 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const testAdminBtn = document.getElementById('testAdminBtn');
     const responseBox = document.getElementById('responseBox');
 
-    // --- State ---
+    
     let token = localStorage.getItem('token');
     
-    // --- Initialize ---
+    
     checkAuthState();
 
-    // --- Navigation Logic ---
+    
     function switchView(viewId) {
-        // Hide all views
+        
         loginView.classList.remove('active');
         signupView.classList.remove('active');
         dashboardView.classList.remove('active');
 
-        // Reset Nav Buttons
+        
         navLoginBtn.classList.remove('active');
         navSignupBtn.classList.remove('active');
 
-        // Show target
+    
         if (viewId === 'login') {
             loginView.classList.add('active');
             navLoginBtn.classList.add('active');
